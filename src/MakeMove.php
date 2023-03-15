@@ -1,35 +1,45 @@
 <?php
-function makeMove(&$board, $symbol)
+function makeMove(&$board, &$turn)
 {
-  $playerNumber = $symbol == "X" ? 1 : 2;
+  $playerNumber = $turn == 1 ? 1 : 2;
   $move = readline("\nPlayer $playerNumber, please pick a cell from 1 to 9:\n");
   switch ($move) {
     case "1":
-      $board[0][0] = $symbol;
+      checkIfCellIsValid($board, 0, 0, $turn);
       break;
     case "2":
-      $board[0][1] = $symbol;
+      checkIfCellIsValid($board, 0, 1, $turn);
       break;
     case "3":
-      $board[0][2] = $symbol;
+      checkIfCellIsValid($board, 0, 2, $turn);
       break;
     case "4":
-      $board[1][0] = $symbol;
+      checkIfCellIsValid($board, 1, 0, $turn);
       break;
     case "5":
-      $board[1][1] = $symbol;
+      checkIfCellIsValid($board, 1, 1, $turn);
       break;
     case "6":
-      $board[1][2] = $symbol;
+      checkIfCellIsValid($board, 1, 2, $turn);
       break;
     case "7":
-      $board[2][0] = $symbol;
+      checkIfCellIsValid($board, 2, 0, $turn);
       break;
     case "8":
-      $board[2][1] = $symbol;
+      checkIfCellIsValid($board, 2, 1, $turn);
       break;
     case "9":
-      $board[2][2] = $symbol;
+      checkIfCellIsValid($board, 2, 2, $turn);
       break;
+  }
+}
+
+function checkIfCellIsValid(&$board, $a, $b, &$turn)
+{
+  if ($board[$a][$b] != "X" && $board[$a][$b] != "O") {
+    $board[$a][$b] = $turn == 1 ? "X" : "O";
+    $turn *= -1;
+  } else {
+    echo "That cell is already taken!\n";
   }
 }
