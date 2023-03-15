@@ -10,8 +10,9 @@ $turn = 1;
 while (true) {
   displayBoard($board);
   $turn == 1 ? makeMove($board, "X") : makeMove($board, "O");
-  if (hasAPlayerWon($board)) break;
+  if (hasAPlayerWon($board)) {
+    echo "\nCongratulations player " . ($turn == 1 ? 1 : 2) . ", you win!\n";
+    break;
+  }
   $turn *= -1;
 }
-
-echo "\nCongratulations player " . ($turn == 1 ? 1 : 2) . ", you win!\n";
