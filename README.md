@@ -14,4 +14,10 @@ into your terminal.
 
 ## How To Use
 
-Simply run `php tictactoe.php` while in the [src](https://github.com/jmcnally17/tictactoe-php/tree/main/src) folder.
+Simply run
+
+```
+php tictactoe.php
+```
+
+while in the [src](https://github.com/jmcnally17/tictactoe-php/tree/main/src) folder.
