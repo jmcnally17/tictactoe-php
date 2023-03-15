@@ -3,6 +3,10 @@ function makeMove(&$board, &$turn)
 {
   $playerNumber = $turn == 1 ? 1 : 2;
   $move = readline("\nPlayer $playerNumber, please pick a cell from 1 to 9:\n");
+  if (isMoveInvalid($move)) {
+    echo "Invalid input!\n";
+    return;
+  }
   switch ($move) {
     case "1":
       checkIfCellIsValid($board, 0, 0, $turn);
@@ -32,6 +36,12 @@ function makeMove(&$board, &$turn)
       checkIfCellIsValid($board, 2, 2, $turn);
       break;
   }
+}
+
+function isMoveInvalid(&$move)
+{
+  $move = preg_replace("[\s]", "", $move);
+  return strlen($move) != 1 || preg_match("[^1-9]", $move);
 }
 
 function checkIfCellIsValid(&$board, $a, $b, &$turn)
