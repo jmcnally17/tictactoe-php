@@ -4,20 +4,20 @@ This project is a recreation of the game tic-tac-toe in PHP that can be run in t
 
 ## Getting Started
 
-You will need to have PHP installed on your computer for this program to run. This can be done using Homebrew (which can be installed on MacOS using the instructions found [here](https://brew.sh/)) by entering:
+This program uses Composer as a package manager. So, if you haven't already, install it via Homebrew by entering
 
 ```
-brew install php
+brew install composer
 ```
 
-into your terminal.
+into your terminal. This will also install PHP for you. Homebrew can be installed on MacOS using the instructions found [here](https://brew.sh/).
 
 ## How To Use
 
 Simply run
 
 ```
-php tictactoe.php
+composer play
 ```
 
-while in the [src](https://github.com/jmcnally17/tictactoe-php/tree/main/src) folder.
+into your terminal.
