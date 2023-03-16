@@ -20,4 +20,4 @@ Simply run
 composer play
 ```
 
-into your terminal.
+while in the [main](https://github.com/jmcnally17/tictactoe-php) directory.
