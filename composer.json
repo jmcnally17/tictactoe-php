@@ -1,8 +1,9 @@
 {
-    "require-dev": {
-        "phpunit/phpunit": "^10.0"
-    },
-    "scripts": {
-      "play" : "cd src && php TicTacToe.php"
-    }
+  "require-dev": {
+    "phpunit/phpunit": "^10.0"
+  },
+  "scripts": {
+    "play": "cd src && php TicTacToe.php",
+    "test": "phpunit tests"
+  }
 }
