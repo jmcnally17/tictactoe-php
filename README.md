@@ -21,3 +21,19 @@ composer play
 ```
 
 while in the [main](https://github.com/jmcnally17/tictactoe-php) directory.
+
+## Testing
+
+Tests have been written using [PHPUnit](https://phpunit.de/). If you want to run the tests, the dependencies in [composer.json](https://github.com/jmcnally17/tictactoe-php/blob/main/composer.json) need to be installed first by entering
+
+```
+composer update
+```
+
+into your terminal. Then, run the tests by entering
+
+```
+composer test
+```
+
+while in the [main](https://github.com/jmcnally17/tictactoe-php) directory.
