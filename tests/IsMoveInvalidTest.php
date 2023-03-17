@@ -1,5 +1,5 @@
 <?php
-include "./src/MakeMove.php";
+include_once "src/MakeMove.php";
 
 use PHPUnit\Framework\TestCase;
 

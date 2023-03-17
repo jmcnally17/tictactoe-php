@@ -1,5 +1,5 @@
 <?php
-include "./src/HasAPlayerWon.php";
+include_once "src/HasAPlayerWon.php";
 
 use PHPUnit\Framework\TestCase;
 
