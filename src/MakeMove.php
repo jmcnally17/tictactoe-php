@@ -2,7 +2,7 @@
 function makeMove(&$board, &$turn)
 {
   $playerNumber = $turn == 1 ? 1 : 2;
-  $move = readline("\nPlayer $playerNumber, please pick a cell from 1 to 9:\n");
+  $move = getPlayerInput($playerNumber);
   if (isMoveInvalid($move)) {
     echo "Invalid input!\n";
     return;
@@ -36,6 +36,11 @@ function makeMove(&$board, &$turn)
       checkIfCellIsValid($board, 2, 2, $turn);
       break;
   }
+}
+
+function getPlayerInput($playerNumber)
+{
+  return readline("\nPlayer $playerNumber, please pick a cell from 1 to 9:\n");
 }
 
 function isMoveInvalid(&$move)

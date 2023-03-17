@@ -51,8 +51,8 @@ final class CheckIfCellIsValidTest extends TestCase
     $a = 0;
     $b = 0;
     $turn = -1;
-    checkIfCellIsValid($board, $a, $b, $turn);
     $this->expectOutputString("That cell is already taken!\n");
+    checkIfCellIsValid($board, $a, $b, $turn);
   }
 
   public function testPrintsCellIsTakenByO()
@@ -61,7 +61,7 @@ final class CheckIfCellIsValidTest extends TestCase
     $a = 0;
     $b = 0;
     $turn = 1;
-    checkIfCellIsValid($board, $a, $b, $turn);
     $this->expectOutputString("That cell is already taken!\n");
+    checkIfCellIsValid($board, $a, $b, $turn);
   }
 }
