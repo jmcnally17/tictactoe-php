@@ -41,7 +41,7 @@ function makeMove(&$board, &$turn)
 function isMoveInvalid(&$move)
 {
   $move = preg_replace("[\s]", "", $move);
-  return strlen($move) != 1 || preg_match("[^1-9]", $move);
+  return !preg_match("/^[1-9]$/", $move);
 }
 
 function checkIfCellIsValid(&$board, $a, $b, &$turn)
